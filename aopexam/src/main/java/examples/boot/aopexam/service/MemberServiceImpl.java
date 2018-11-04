@@ -20,8 +20,8 @@ public class MemberServiceImpl implements MemberService{
         List<Member> list = new ArrayList<>();
         list.add(new Member(1L, "kim", 10));
         list.add(new Member(2L, "kang", 20));
-        if(1 == 1)
-            throw new RuntimeException("1 == 1");
+//        if(1 == 1)
+//            throw new RuntimeException("1 == 1");
         list.add(new Member(3L, "hong", 15));
         list.add(new Member(4L, "choi", 23));
         return list;

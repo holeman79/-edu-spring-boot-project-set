@@ -31,6 +31,8 @@ public class SocketHandler extends TextWebSocketHandler {
                 = new TypeReference<HashMap<String,Object>>() {};
         HashMap<String, String> map = objectMapper.readValue(message.getPayload(), typeRef);
         map.put("name", "loginname"); // login 정보를 어떻게 읽어와야할지 고민하자.
+                                      // 웹소켓 spring security에 대해 고민해보자.
+                                      // 1번방, 2번방끼리 대화할 수 있도록 해보자.
 
         String msg = objectMapper.writeValueAsString(map);
         System.out.println(msg);

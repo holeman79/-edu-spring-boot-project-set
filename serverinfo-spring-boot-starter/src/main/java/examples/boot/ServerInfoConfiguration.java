@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class ServerInfoConfiguration {
 
     @Bean
+    @ConditionalOnMissingBean // 기존 생성 Bean 이 없으면 이것을 사용할 수 있도록한다.
     public ServerInfo serverInfo(
             ServerInfoProperties serverInfoProperties){
         ServerInfo serverInfo = new ServerInfo();
